@@ -1,5 +1,9 @@
 // server.js
 const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
 const app = express();
 
 // If an incoming request uses
@@ -20,7 +24,7 @@ const forceSSL = function() {
 // Instruct the app
 // to use the forceSSL
 // middleware
-app.use(forceSSL());
+//app.use(forceSSL());
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
